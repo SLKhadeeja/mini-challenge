@@ -21,6 +21,11 @@
   
   // Return an array consisting of the largest number from each provided sub-array
   const findLargestOfArrays = (arrays) => {
+    return arrays.map(function (subArrays){
+      return subArrays.reduce(function (previousLargestNumber, currentLargestNumber) {
+        return (currentLargestNumber > previousLargestNumber) ? currentLargestNumber : previousLargestNumber;
+      }, 0);
+    });
     // Add your logic here
   }
   
